@@ -1,0 +1,161 @@
+.background-slider {
+  position: relative;
+  height: 100vh;
+  margin-top: 60px; /* below navbar */
+  overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 10s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* First Slide */
+.slide1 {
+  background-image: url('/assets/images/mobile-app.png');
+  animation-delay: 0s;   /* start immediately */
+}
+
+/* Second Slide */
+.slide2 {
+  background-image: url('/assets/images/web-app.png');
+  animation-delay: 5s;   /* show after 5 seconds */
+}
+
+/* Overlay text */
+.overlay {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4169E1;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cta-btn:hover {
+  background-color: #314bc1;
+}
+
+/* Fade animation */
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+/* Features Section */
+.features {
+  padding: 80px 50px;
+  background: #f9f9f9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: white;
+  border-radius: 10px;
+  padding: 50px 30px;   /* increased padding for more height */
+  min-height: 400px;    /* ensures each box has a taller length */
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-20px);
+}
+
+.feature-box h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.feature-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Testimonial & Solutions */
+.testimonial-solutions .container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+  margin-top: 60px;
+}
+.testimonial {
+  border-right: 2px solid #28a745;
+  padding-right: 20px;
+}
+.testimonial .stars {
+  color: #28a745;
+  font-size: 20px;
+}
+.testimonial p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.testimonial h4 {
+  font-weight: bold;
+  color: #555;
+}
+.testimonial a {
+  color: #28a745;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Accordion */
+.accordion {
+  background-color: #28a745;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+.panel {
+  padding: 0 15px;
+  display: none;
+  background: #f9f9f9;
+  overflow: hidden;
+  border-radius: 0 0 5px 5px;
+}

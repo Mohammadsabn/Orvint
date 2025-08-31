@@ -1,0 +1,93 @@
+/* Topbar */
+.topbar {
+  background-color: #242A56;
+  height: 60px;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Flex container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centers inside 60px bar */
+  align-items: center;
+  height: 100%;  /* match nav height */
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+}
+
+.logo .main-title {
+  font-size: 26px;   /* increased */
+  font-weight: bold;
+}
+
+.logo .subtitle {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ddd;
+}
+
+/* Right section (menu + icons) */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Menu links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover { 
+  text-decoration: underline; size: 10pt;
+}
+
+/* Social + Search Icons */
+.nav-icons a {
+  margin-left: 20px;
+  color: whitesmoke;
+  transition: color 0.3s ease;
+}
+
+.nav-icons a:hover{
+    color: rgba(255, 255, 255, 0.836)
+}
+
+/* Page content (pushed down from navbar) */
+.content {
+  padding-top: 40px;
+  text-align: center;
+}
+
+/* Page background */
+:host {
+  display: block;
+  min-height: 50vh;
+}
+
